@@ -1,6 +1,6 @@
 import "98.css"
 import styles from './app.module.css'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 const Window = () => {
     const [string, setString] = useState("")
     const [comments, setComments] = useState([])
@@ -14,6 +14,15 @@ const Window = () => {
         console.log(e)
     }
 
+    // fetch comments
+    function fetchComments(){
+        setComments(fetch("http://localhost:8080/api/comments"))
+    }
+
+    useEffect(() => {
+        fetchComments();
+    }, []);
+
     return (
     <div className={`window ${styles.windowTitle} `}>
         <div className={`title-bar`}>
@@ -24,7 +33,9 @@ const Window = () => {
             <button aria-label="Close" />
           </div>
         </div>
-        <div className={`window-body ${styles.windowBody}`}>Enter your comments lol
+        <div className={`window-body ${styles.windowBody}`}>{comments.map((comment)=>{
+            comment.message
+        })}
             
             <div className={`field-row-stacked ${styles.inputSection}`}>
                 
