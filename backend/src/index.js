@@ -1,14 +1,9 @@
 import express from "express";
-import { PORT } from "./env";
+import { connectToMongo, openExpressServer } from "./startup.js";
 
 const app = express();
 
+app.use(express.json());
 
-
-app.listen(PORT, () => {
-  if (process.env.NODE_ENV === "development") {
-    console.log(`Server running at http://localhost:${PORT}`);
-  } else {
-    console.log(`Server running on port ${PORT}`);
-  }
-});
+connectToMongo();
+openExpressServer(app);
