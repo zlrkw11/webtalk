@@ -12,9 +12,9 @@ const Window = () => {
           </div>
         </div>
         <div className={`window-body ${styles.windowBody}`}>Enter your comments lol
-            <div className={`field-row-stacked ${styles.inputBox}`}>
+            <div className={`field-row-stacked`}>
                 <label htmlFor="text20">comment</label>
-                <textarea id="text20" rows="5"></textarea>
+                <textarea className={`${styles.inputBox}`} id="text20" rows="5"></textarea>
             </div>
         </div>
       </div>

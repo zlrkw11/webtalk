@@ -6,7 +6,6 @@
 .windowBody{
     width: 500px;
     height: 500px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
@@ -14,7 +13,7 @@
 }
 
 .inputBox{
-    max-width: 300px;
-    max-height: 200px;
-    padding: 2rem;
+    resize: none;
+    width: 200px;
+    margin-bottom: 2rem;
 }
