@@ -15,5 +15,9 @@
 .inputBox{
     resize: none;
     width: 200px;
-    margin-bottom: 2rem;
+    
+}
+
+.button{
+    width: 20px;
 }
