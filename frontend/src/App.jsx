@@ -6,7 +6,12 @@ function App() {
   return (
    
       <div className={`window ${styles.mainWindow} `}>
-          ray
+        <div className={`title-bar-text`}>web talk</div>
+        <div className="title-bar-controls">
+          <button aria-label="Minimize" />
+          <button aria-label="Maximize" />
+          <button aria-label="Close" />
+        </div>
       </div>
 
     
