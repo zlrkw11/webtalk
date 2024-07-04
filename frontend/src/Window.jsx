@@ -9,10 +9,18 @@ const Window = () => {
         setString(e.target.value);
     }
 
-    function handleSubmit(e){
+    async function handleSubmit(e){
         e.preventDefault();
-        setComments([...comments, {_id:Math.random() ,message: string}]);
-        
+        const comment = {_id:Math.random() ,message: string}
+        setComments([...comments, comment]);
+        await fetch("http://localhost:8080/api/comments"), {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(comment)
+        },
+       
         console.log(e)
     }
 
