@@ -6,9 +6,15 @@
 .windowBody{
     width: 500px;
     height: 500px;
-    margin: 0 auto
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
 }
 
 .inputBox{
-    width: 300px;
+    max-width: 300px;
+    max-height: 200px;
+    padding: 2rem;
 }
