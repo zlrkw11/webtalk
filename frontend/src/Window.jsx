@@ -1,6 +1,9 @@
 import "98.css"
 import styles from './app.module.css'
+import { useState } from "react"
 const Window = () => {
+    const [string, setString] = useState("")
+
     return (
     <div className={`window ${styles.windowTitle} `}>
         <div className={`title-bar`}>
@@ -18,7 +21,7 @@ const Window = () => {
                 <textarea className={`${styles.inputBox}`} id="text20" rows="5"></textarea>
                 <div className={`${styles.buttonRow}`}>
             
-                    <button className={`${styles.button}`}>post</button>
+                    <button onClick={handleSubmit} className={`${styles.button}`}>post</button>
                     <button className={`${styles.button}`}>clear</button>
                  
                 </div>
