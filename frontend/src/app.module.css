@@ -1,4 +1,10 @@
-.mainWindow {
+.windowTitle {
     width: 500px;
+    margin: 0 auto
+}
+
+.windowBody{
+    width: 500px;
+    height: 500px;
     margin: 0 auto
 }
