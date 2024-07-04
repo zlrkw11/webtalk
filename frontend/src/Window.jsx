@@ -15,8 +15,11 @@ const Window = () => {
     }
 
     // fetch comments
-    function fetchComments(){
-        setComments(fetch("http://localhost:8080/api/comments"))
+    async function fetchComments(){
+        const c = await fetch("http://localhost:8080/api/comments")
+        console.log(c)
+        setComments(c)
+        
     }
 
     useEffect(() => {
@@ -34,7 +37,7 @@ const Window = () => {
           </div>
         </div>
         <div className={`window-body ${styles.windowBody}`}>{comments.map((comment)=>{
-            comment.message
+            return <p key={comment._id}>{comment.message}</p>
         })}
             
             <div className={`field-row-stacked ${styles.inputSection}`}>
