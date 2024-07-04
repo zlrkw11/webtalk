@@ -16,7 +16,12 @@ const Window = () => {
             <div className={`field-row-stacked ${styles.inputSection}`}>
                 
                 <textarea className={`${styles.inputBox}`} id="text20" rows="5"></textarea>
-                <button className={`${styles.button}`}>post</button>
+                <div className={`${styles.buttonRow}`}>
+            
+                    <button className={`${styles.button}`}>post</button>
+                    <button className={`${styles.button}`}>clear</button>
+                 
+                </div>
             </div>
         </div>
       </div>
