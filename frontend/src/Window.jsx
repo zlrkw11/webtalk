@@ -11,15 +11,15 @@ const Window = () => {
 
     async function handleSubmit(e){
         e.preventDefault();
-        const comment = {_id:Math.random() ,message: string}
+        const comment = { message: string}
         setComments([...comments, comment]);
-        await fetch("http://localhost:8080/api/comments"), {
+        await fetch("http://localhost:8080/api/comments", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(comment)
-        },
+        })
        
         console.log(e)
     }
