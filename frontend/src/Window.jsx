@@ -11,7 +11,12 @@ const Window = () => {
             <button aria-label="Close" />
           </div>
         </div>
-        <div className={`window-body ${styles.windowBody}`}>ray</div>
+        <div className={`window-body ${styles.windowBody}`}>Enter your comments lol
+            <div className={`field-row-stacked ${styles.inputBox}`}>
+                <label htmlFor="text20">comment</label>
+                <textarea id="text20" rows="5"></textarea>
+            </div>
+        </div>
       </div>
       
     )
