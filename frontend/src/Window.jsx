@@ -3,6 +3,7 @@ import styles from './app.module.css'
 import { useState } from "react"
 const Window = () => {
     const [string, setString] = useState("")
+    const [comments, setComments] = useState([])
 
     function handleChange(e){
         setString(e.target.value);
