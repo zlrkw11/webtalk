@@ -2,17 +2,14 @@ import mongoose from "mongoose";
 import { MONGO_URI, NODE_ENV, PORT } from "./env.js";
 
 export function connectToMongo() {
-  mongoose.connect(MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  });
-  mongoose.connection.on("error", (err) => {
-    console.error(err);
-  });
-  mongoose.connection.on("open", () => {
-    console.log("Connected to MongoDB");
-  });
+  mongoose
+    .connect(MONGO_URI)
+    .then(() => {
+      console.log("Connected to MongoDB");
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
 
 export function openExpressServer(app) {
