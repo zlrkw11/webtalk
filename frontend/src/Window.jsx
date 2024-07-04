@@ -12,6 +12,10 @@ const Window = () => {
           </div>
         </div>
         <div className={`window-body ${styles.windowBody}`}>ray</div>
+        <div className="field-row-stacked inputBox">
+            <label htmlFor="text20">comment</label>
+            <textarea id="text20" rows="8"></textarea>
+        </div>
       </div>
       
     )
