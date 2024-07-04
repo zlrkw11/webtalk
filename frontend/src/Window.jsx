@@ -4,6 +4,15 @@ import { useState } from "react"
 const Window = () => {
     const [string, setString] = useState("")
 
+    function handleChange(e){
+        setString(e.target.value);
+    }
+
+    function handleSubmit(e){
+        e.preventDefault();
+        console.log(e)
+    }
+
     return (
     <div className={`window ${styles.windowTitle} `}>
         <div className={`title-bar`}>
@@ -18,11 +27,11 @@ const Window = () => {
             
             <div className={`field-row-stacked ${styles.inputSection}`}>
                 
-                <textarea className={`${styles.inputBox}`} id="text20" rows="5"></textarea>
+                <textarea className={`${styles.inputBox}`} onChange={(e)=>{handleChange(e)}} value={string} id="text20" rows="5"></textarea>
                 <div className={`${styles.buttonRow}`}>
             
-                    <button onClick={handleSubmit} className={`${styles.button}`}>post</button>
-                    <button className={`${styles.button}`}>clear</button>
+                    <button onClick={(e)=>handleSubmit(e)}  className={`${styles.button}`}>post</button>
+                    <button  className={`${styles.button}`}>clear</button>
                  
                 </div>
             </div>
