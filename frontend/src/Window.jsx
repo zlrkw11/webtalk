@@ -11,6 +11,8 @@ const Window = () => {
 
     function handleSubmit(e){
         e.preventDefault();
+        setComments([...comments, {_id:Math.random() ,message: string}]);
+        
         console.log(e)
     }
 
