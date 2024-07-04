@@ -1,7 +1,7 @@
 {
   "name": "webtalk",
   "version": "1.0.0",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": "https://zlrkw11.github.io/webtalk",
   "description": "",
   "scripts": {
     "predeploy": "npm run build",
@@ -9,7 +9,8 @@
     "setup": "npm i && cd frontend && npm i && cd ../backend && npm i",
     "run:backend": "cd backend && npm run dev",
     "run:frontend": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run run:backend\" \"npm run run:frontend\""
+    "dev": "concurrently \"npm run run:backend\" \"npm run run:frontend\"",
+    "build": "react-scripts build"
   },
   "author": "",
   "license": "ISC",

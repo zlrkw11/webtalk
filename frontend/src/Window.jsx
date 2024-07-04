@@ -17,7 +17,6 @@ const Window = () => {
     // fetch comments
     async function fetchComments(){
         const c = await fetch("http://localhost:8080/api/comments")
-        console.log(await c.json())
         setComments(await c.json())
         
     }
